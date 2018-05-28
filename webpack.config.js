@@ -1,14 +1,14 @@
 const path = require("path");
 const HtmlWepackPlugin = require("html-webpack-plugin");
 const HtmlWebpackPluginConfig = new HtmlWepackPlugin({
-  template: "./client/index.html",
+  template: "./src/index.html",
   filename: "index.html",
   inject: "body"
 });
 
 module.exports = {
   entry: {
-    main: "./client/index.js"
+    main: "./src/index.js"
   },
   output: {
     path: path.resolve("dist"),
