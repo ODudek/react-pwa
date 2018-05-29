@@ -1,12 +1,13 @@
-import { FETCH_POSTS } from "../actions/types";
+import { FETCH_PHOTOS } from "../actions/types";
 const initialState = {
   items: [],
-  item: {}
+  item: {},
+  pageNumber: 0
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case FETCH_POSTS:
+    case FETCH_PHOTOS:
       return {
         ...state,
         items: action.payload

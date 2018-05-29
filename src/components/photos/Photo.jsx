@@ -6,11 +6,11 @@ class Photo extends Component {
       <div className="card">
         <div className="card-image">
           <figure className="image">
-            <img src="" alt="Image" />
+            <img className="is-150" src={this.props.children[0]} alt="Image" />
           </figure>
         </div>
         <div className="card-content">
-          <p className="title">test</p>
+          <p className="title">{this.props.children[1]}</p>
         </div>
       </div>
     );

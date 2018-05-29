@@ -12,13 +12,14 @@ module.exports = {
   },
   output: {
     path: path.resolve("dist"),
-    filename: "js/[name].[chunkhash:8].js"
+    filename: "js/[name].[chunkhash:8].js",
+    publicPath: "/"
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: "css-loader"
+        loader: "style-loader!css-loader"
       },
       {
         test: /\.js$/,
@@ -33,5 +34,8 @@ module.exports = {
     ]
   },
   mode: "development",
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
+  devServer: {
+    historyApiFallback: true
+  }
 };
